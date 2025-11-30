@@ -1,21 +1,47 @@
 import React from 'react';
 import styled from 'styled-components';
+import {useState} from 'react';
 
 const Checkbox = () => {
+  const[hidden, sethidden] = useState(true);
+  const[checked, setchecked] = useState(false);
+
+  const handleChange = () => {
+    setchecked(!checked);
+    sethidden(!hidden);
+  }
   return (
     <StyledWrapper>
       <label className="hamburger">
-        <input type="checkbox" />
+        <input type="checkbox" checked={checked} onChange={handleChange} />
         <svg viewBox="0 0 32 32">
           <path className="line line-top-bottom"  d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22" />
           <path className="line" d="M7 16 27 16" />
         </svg>
       </label>
+     <div className={`absolute h-screen right-0 w-48 bg-white rounded-md shadow-lg py-14 z-50 transition-opacity duration-300  flex flex-col  justify-between ${hidden ? 'hidden' : ''}`}>
+      <div className="flex flex-col gap-3">
+      <a href="#" className="text-[#3400D1] px-6 hover:bg-gray-200">Home</a>
+      <hr className="bg-indigo-100 text-indigo-100" />
+     
+      <a href="#" className="text-[#3400D1] px-6  hover:bg-gray-200">Contact</a>
+       <hr className="bg-indigo-100 text-indigo-100" />
+      </div>
+     
+      <div className="pt-4 flex flex-col items-center gap-2 w-full ">
+        <div className="w-4/5 flex flex-col gap-2">
+          <a className="bg-[#2900A3] text-white w-full py-2 rounded-md hover:bg-[#3F00FF]">Register</a>
+        </div>
+        <p className="text-xs text-gray-400">© 2024 PMS. All rights reserved.</p>
+      </div>
+     </div>
     </StyledWrapper>
   );
 }
 
+
 const StyledWrapper = styled.div`
+
   .hamburger {
     cursor: pointer;
     color: black;

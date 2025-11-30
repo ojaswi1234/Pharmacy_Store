@@ -28,12 +28,12 @@ const NavBar = () => {
     )
   }
   return (
-    <div className="w-5/7 md:w-4/5 h-12 rounded-full bg-white fixed top-4 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-around md:justify-between px-4 md:px-5">
+    <div className="w-4/5 h-12 rounded-full bg-white fixed top-4 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-around md:justify-between px-4 md:px-5">
       <a href="/" className="pixelify text-xl  text-[#2900A3] ">PMS</a>
       <div className="flex flex-row justify-between items-center py-4 space-x-8">
-        <span className="text-[#3400D1] cursor-pointer">home</span>
-        <span className="text-[#3400D1] cursor-pointer">menu</span>
-        <span className="text-[#3400D1] cursor-pointer">contact</span>
+        <a href="#" className="text-[#3400D1] cursor-pointer">Home</a>
+        <a href="#" className="text-[#3400D1] cursor-pointer">Contact</a>
+        <a href="#" className="bg-[#2900A3] cursor-pointer text-white px-4 py-[5.5px] rounded-full ">Register</a>
       </div>
     </div>
     ) 
