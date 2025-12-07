@@ -5,4 +5,8 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-})
+  proxy: {
+    '/admin_register': 'http://localhost:5000',
+    '/admin_login': 'http://localhost:5000'
+  }
+});

@@ -45,8 +45,8 @@ const StyledWrapper = styled.div`
     /* soft neumorphism + subtle gradient for depth */
     background: linear-gradient(180deg, rgba(255,255,255,0.65), rgba(245,246,250,0.5));
     box-shadow:
-      18px 18px 40px rgba(16, 24, 40, 0.06),
-      -12px -12px 30px rgba(255, 255, 255, 0.8),
+      18px 18px 4px rgba(16, 24, 40, 0.06),
+      8px 8px 10px rgba(255, 255, 255, 0.8),
       inset 0 1px 0 rgba(255,255,255,0.35);
     border: 1px solid rgba(255,255,255,0.5);
     transition: transform 360ms cubic-bezier(.2,.9,.2,1), box-shadow 360ms, filter 360ms;
